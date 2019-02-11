@@ -34,7 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.defaultSuccessUrl("/")
 			.permitAll();
 
-		http.csrf().disable().authorizeRequests()
+		http.authorizeRequests()
 			.antMatchers("/RegistrationForm").permitAll()
 			.antMatchers("/Register").permitAll()
 			.antMatchers("/Result").permitAll()
